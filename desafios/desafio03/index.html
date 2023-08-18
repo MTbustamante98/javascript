@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Desafio 3</title>
+    <style>
+        button{
+            padding: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1>Antes e depois</h1>
@@ -11,12 +16,14 @@
     
     <script>
         function inicio(){
-            let num = window.prompt ('Digite um número inteiro qualquer')
+            let numb = Number.parseFloat(window.prompt ('Digite um número inteiro qualquer'))
             
-            let n2 = num + 1 
+            var n2  =  numb - 1
+            var n3  =  numb + 1 
             
-            window.alert (`Depois de ${num}, temos o número ${n2}.`)
-            }    
+window.alert(`Antes de ${numb}, temos o número ${n2}.
+Depois de ${numb}, temos o número ${n3}.`)
+            }   
     </script>
    
 </body>
