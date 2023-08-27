@@ -14,10 +14,18 @@
 </head>
 <body>
         <h1>Iniciando estudos com DOM</h1>
-        <p>Aqui vai o resultado</p>
+        <p>Estou usando o DOM</p>
+        <p class="msg">Aqui vai o resultado</p>
+        <p>Paragráfo de exemplo</p>
         <div>Clique em mim</div>
         <script>
-
+            var p1 = window.document.getElementsByTagName('p')[0]
+            window.document.write('Nesse paragráfo estou fazendo uso do DOM: ' + p1.innerText)
+            p1.style.color = 'blue'
+            p1.style.margin = 'auto'
+            p1.style.border = 'solid black 1px'
+            var d = window.document.querySelector('p.msg')
+            d.style.background = 'red'
         </script>
 </body>
 </html>
