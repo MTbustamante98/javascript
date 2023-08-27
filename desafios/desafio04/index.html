@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 04</title>
+    <style>
+        button {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1> 
+    <button onclick="clique()">Comprar o produto</button>
+    <script>
+        function clique(){
+            let produto = window.prompt('Que produto você está comprando? ')
+
+            let valor = Number.parseFloat(window.prompt(`Quanto custa o ${produto} que você está comprando? `))
+
+            let valor2 = Number.parseFloat(window.prompt(`Qual foi o valor que você deu para pagar o ${produto}? `))
+
+            let S = parseInt(valor - valor2)
+
+            window.alert(`Você comprou o ${produto} que custou R$ ${valor}. Deu R$ ${valor2} em dinheiro e vai receber R$ ${S} ,00 de troco. Volte sempre.`)
+        }
+    </script>
+</body>
+</html>
