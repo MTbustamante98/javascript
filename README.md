@@ -10,5 +10,4 @@ res.innerHTML = `<p>Olá, <strong>${nome}</strong>! É um grande prazer te conhe
             Depois de ${numb}, temos o número ${n3}.`)
             } 
 
-            
-           
+            onmouseenter="entrar()" onmouseout="sair()"
