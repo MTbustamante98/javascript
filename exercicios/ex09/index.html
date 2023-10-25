@@ -9,7 +9,7 @@
             background-color: rgb(61, 150, 233);
             color: white;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        }
+        }    
     </style>
 </head>
 <body>
@@ -17,7 +17,9 @@
         <p>Estou usando o DOM</p>
         <p class="msg">Aqui vai o resultado</p>
         <p>Paragráfo de exemplo</p>
+        <p id="principal">OLÁ</p>
         <div>Clique em mim</div>
+        <div id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error vero optio, odit itaque possimus sequi iste asperiores? Magnam maiores, labore aut similique eum voluptates vero minus sequi ipsum perferendis possimus!</div>
         <script>
             var p1 = window.document.getElementsByTagName('p')[0]
             window.document.write('Nesse paragráfo estou fazendo uso do DOM: ' + p1.innerText)
@@ -26,6 +28,11 @@
             p1.style.border = 'solid black 1px'
             var d = window.document.querySelector('p.msg')
             d.style.background = 'red'
+            var p2 = document.getElementById('principal')
+            principal.style.background = 'blue'
+            
+            var bloco = document.querySelector('div#paragraph')
+            paragraph.style.margin = '10px'            
         </script>
 </body>
 </html>
