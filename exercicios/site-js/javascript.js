@@ -2,13 +2,13 @@ function carregar() {
     var msg = document.getElementById('msg')
     var img = document.getElementById('imagem')
     var data = new Date()
-    //var hora = data.getHours()
-    var hora = 4
+    var hora = data.getHours()
     msg.innerHTML = `Agora são ${hora} horas.`
-    if (hora >= 6 && hora <= 12) {
+
+    if (hora >= 6 && hora <= 11) {
         img.src = 'manha.jpg'
         document.body.style.background = '#e2cd9f'
-    } else if (hora >= 13 && hora <= 18 ) {
+    } else if (hora >= 12 && hora <= 18 ) {
         img.src = 'tarde.jpg'
         document.body.style.background = '#00AAF5'
     } else if (hora >= 19 && hora <= 23) {
@@ -19,6 +19,4 @@ function carregar() {
         document.body.style.background = 'black'
         msg.innerHTML = `Agora é ${hora}hr da madrugada` 
     }
-
-
 }
