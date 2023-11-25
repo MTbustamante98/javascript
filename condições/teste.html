@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        .res {
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+
+        #principal {
+            margin: auto;
+            text-align: center;
+            border: 1px solid black;
+            height: 300px;
+            width: 450px;
+        }
+    </style>
+</head>
+<body>
+    <section id="principal">
+        <h1>Sistema de multas</h1>
+        Digite a sua velocidade: <input type="number" name="txtvel" id="txtvel">
+        <input type="button" value="Verificar" onclick="tocheck()">
+        <div class="res">
+        </div>
+    </section>
+    <script>
+        function tocheck() {
+        var txvel = document.querySelector('input#txtvel')
+        var res = document.querySelector('div.res')
+        var vel = Number(txvel.value)
+            res.innerHTML = `<p>A velocidade atual do seu carro é de <strong> ${vel} Km/h<strong><p>`
+            if (vel > 68) {
+                res.innerHTML += '<p>Você ultrapassou o limite de velocidade permitido, <strong>MULTADO<strong><p>'   
+        }   else if (vel > 61) {
+                res.innerHTML += '<p><strong>ALERTA VERMELHO!<strong> você quase ultrapassou o limite de velocidade, <strong>CUIDADO!<strong><p>'
+        }    
+}
+ 
+    </script>
+</body>
+</html>
