@@ -9,7 +9,6 @@ function tocheck() {
             var fsex = document.getElementsByName('radsex')
             var idade = ano - Number(fano.value)
             var img = document.createElement('img')
-            img.setAttribute('id', 'foto')
             var genero = ''
                 if (fsex [0].checked) {
                     genero = 'Homem'
@@ -41,17 +40,19 @@ function tocheck() {
                         } else if (idade < 25) {
                             img.setAttribute('src', 'longevo-f.jpg')
                         } else if (idade < 35) {
-                            img.setAttribute ('src','adulto-f')
+                            img.setAttribute ('src', 'adulto-f.jpg')
                         } else if (idade < 45) {
-                            img.setAttribute('src', 'mulher-40.jpg')
-                        } else if (idade < 65) {
-                            img.setAttribute('src' ,'mulher-60.jpg')
+                            img.setAttribute('src',  'mulher-40.jpg')
+                        } else if (idade <= 65) {
+                            img.setAttribute('src' , 'mulher-60.jpg')
                         } else {
                             img.setAttribute ('src', 'mulher-70.jpg')
                         }      
-                } 
-                res.innerHTML += `Detectamos ${genero} de ${idade} anos.`
-                res.appendChild(img)    
+                }        
         }
+            res.innerHTML = `Detectamos ${genero} de ${idade} anos.`
+            res.appendChild(img)
+            img.style.margin = '30px'
+            img.setAttribute('id', 'foto')
 }
 

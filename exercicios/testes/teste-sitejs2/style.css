@@ -32,6 +32,6 @@ input[type=button] {
     cursor: pointer;
 }
 
-input:hover {
+input[type=button]:hover {
     background-color: rgba(24, 188, 238, 0.568);
 }

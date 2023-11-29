@@ -8,8 +8,8 @@ function carregar() {
         
     if (hora >= 6 && hora <= 11) {
         img.src = 'manha.jpg'
-        document.body.style.background = '#EEE8AA'
-    } else if (hora >= 12 && hora <= 17) {
+        document.body.style.background='#EEE8AA'
+    } else if ( hora >= 12 && hora <= 17) {
         img.src = 'tarde.jpg'
         document.style.background = '#00BFFF'
     } else if (hora == 18) {
