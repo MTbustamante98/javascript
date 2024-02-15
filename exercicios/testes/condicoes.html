@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+</head>
+<body>
+    <h1>Em que País você vive?</h1>   
+    Digite o País em que você reside <input type="text" name="pais" id="pais">
+    <input type="button" value="Enviar" onclick="tosend()">
+    <div id="res">
+
+    </div>
+    <script>
+        function tosend() {
+            var txtv = document.querySelector('input#pais')
+            var res = document.querySelector('div#res')
+            var tosend = (txtv.value)
+            res.innerHTML = `<p.Você vive em ${tosend}<p>` 
+        }
+    </script>
+</body>
+</html>
